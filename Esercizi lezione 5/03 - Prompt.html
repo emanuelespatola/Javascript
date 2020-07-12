@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt button</title>
+    
+    <h1>Prompt Example</h1>
+</head>
+<body>
+    <button onclick="Ricevisaluto()">Saluta!</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function Ricevisaluto() {
+            var person = prompt ("Scrivi il tuo nome")
+            if (person !=null) {
+                document.getElementById("demo").innerHTML =
+                "Ciao da " + person ;
+            }
+        }
+    </script>
+</body>
+</html>

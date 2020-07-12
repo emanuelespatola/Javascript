@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript countDown</title>
+
+    <style>
+        #Display {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function countDown (initial, final, Interval) {
+            var target = document.getElementById ("Display");
+            var number = initial ;
+
+            var timer = setInterval (function(){
+                if (number <= final) {
+                    clearInterval (timer);
+                    target.innerHTML = final;
+                } else {
+                    target.innerHTML = number;
+                }
+                number -= initial;
+
+            }, 1000);
+        };
+    </script>
+</head>
+<body onload = "countDown (30,0,2)">
+    <h1>JavaScript countDown</h1>
+    <div id="Display"></div>
+</body>
+</html>
